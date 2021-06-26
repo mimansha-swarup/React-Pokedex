@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "react-toastify/dist/ReactToastify.css";
+import "./styles.css";
 
-function App() {
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+
+import { PokeContext } from "./Context/PokeContext";
+import Home from "./Components/Home";
+import PokeProfile from "./Components/Pokemon/PokeProfile";
+import NavBar from "./Components/Layout/NavBar";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PokeContext.Provider value={{}}>
+      <Router>
+        <div className="App">
+          <NavBar />
+          <ToastContainer />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/pokemon/:id" component={PokeProfile} />
+            {/*  */}
+          </Switch>
+        </div>
+      </Router>
+    </PokeContext.Provider>
   );
 }
-
-export default App;
