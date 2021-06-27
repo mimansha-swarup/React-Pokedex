@@ -12,12 +12,12 @@ const SpritesCard = () => {
         <div className="sprite-card">
             {
                 Object.keys(pokeData.sprites).slice(0,-2).map((sprite,i)=>(
-                    <>
+                    <div key={i}>
                     {
                         
                         pokeData.sprites[sprite] && <img className="sprtie-pic" src={pokeData.sprites[sprite] } alt=""/>
                     }
-                    </>
+                    </div>
                 ))
             }
             
