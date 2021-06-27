@@ -6,6 +6,7 @@ import { PokeContext } from "../Context/PokeContext";
 import PokeDataCard from "../Components/Pokemon/PokeDataCard";
 import PokeStats from "../Components/Pokemon/PokeStats";
 import EggCard from "../Components/Pokemon/EggCard";
+import SpritesCard from "../Components/Pokemon/SpritesCard";
 
 const typeColor={
   bug:"#a8b821",
@@ -66,20 +67,12 @@ const PokeProfile = () => {
     themeColor: "",
     baseHappiness: "",
     eggGroups: [],
-  });
+    sprites:[],
+    });
 
-  const state = {
-    
-    statTitleWidth: 3,
-    statBarWidth: 9,
-   
-    eggGroups: [],
-   
-    genderRatioMale: "",
-    genderRatioFemale: "",
-    evs: "",
+  
 
-  };
+ 
 
   useEffect(() => {
     setLoading(true);
@@ -169,6 +162,8 @@ const PokeProfile = () => {
         <PokeStats/>
         <EggCard/>
         </div>
+       
+        <SpritesCard/>
 
        
       </div>

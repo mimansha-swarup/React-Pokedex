@@ -126,6 +126,9 @@ a {
     .stat-holder {
         width: fit-content;
     }
+    .sprite-card {
+        flex-wrap: wrap;
+    }
 }
 
 .row {
@@ -218,7 +221,7 @@ hr {
     color: #525252;
 }
 
-.stat-holder h2 {
+.heading {
     color: #262626
 }
 
@@ -242,4 +245,25 @@ td {
 
 .stat-value {
     padding: .2rem;
+}
+
+
+/* Sprite Card */
+
+.sprite-cont {
+    background-color: #FED7AA;
+    padding: 1rem 0;
+    margin: 2rem 0;
+    border-radius: 1rem;
+}
+
+.sprite-card {
+    display: flex;
+    justify-content: space-evenly;
+    overflow: auto;
+}
+
+.sprtie-pic {
+    height: 150px;
+    width: 150px;
 }
