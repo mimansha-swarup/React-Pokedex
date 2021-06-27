@@ -6,8 +6,10 @@ import { toast } from "react-toastify";
 const Home = () => {
   const [pokemons, setPokemons] = useState([]);
 
-  const [limit, setLimit] = useState(151);
-  const [offset, setOffset] = useState(0);
+  // const [limit, setLimit] = useState(151);
+  // const [offset, setOffset] = useState(0);
+  const [limit ] = useState(151);
+  const [offset] = useState(0);
   // const [currentPageUrl, setCurrentPageUrl] = useState("https://pokeapi.co/api/v2/pokemon/");
   // const [pokeIndex, setPokeIndex] = useState([]);
 
