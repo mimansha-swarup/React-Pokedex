@@ -4,14 +4,13 @@ import "./styles.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
-import { PokeContext } from "./Context/PokeContext";
-import Home from "./Components/Home";
-import PokeProfile from "./Components/Pokemon/PokeProfile";
+import Home from "./Pages/Home";
+import PokeProfile from "./Pages/PokeProfile";
 import NavBar from "./Components/Layout/NavBar";
 
 export default function App() {
   return (
-    <PokeContext.Provider value={{}}>
+    
       <Router>
         <div className="App">
           <NavBar />
@@ -23,6 +22,6 @@ export default function App() {
           </Switch>
         </div>
       </Router>
-    </PokeContext.Provider>
+   
   );
 }
