@@ -5,8 +5,9 @@
 
 body {
     position: relative;
-    background: repeating-linear-gradient( -45deg, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.95) .5rem, #ef4444 .1rem, #ef4444 6rem) center center fixed;
+    background: repeating-linear-gradient( -45deg, rgba(17, 24, 39, 0.95), #111827f2 .5rem, #ef4444 .1rem, #ef4444 6rem) center center fixed;
     backdrop-filter: blur(5px);
+    color: #F1F5F9;
 }
 
 .App {
@@ -57,7 +58,7 @@ nav img {
 }
 
 .glass-cont {
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 1rem;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -122,6 +123,9 @@ a {
     .prof-pic {
         height: 17rem;
     }
+    .stat-holder {
+        width: fit-content;
+    }
 }
 
 .row {
@@ -143,24 +147,9 @@ a {
     /* height: 15rem; */
     text-align: left;
     /* height: 15rem;
-    opacity: 1; */
+opacity: 1; */
     border-radius: 1rem;
 }
-
-.data-card {
-    padding: 1rem;
-    margin: 1rem;
-    background: #BAE6FD;
-    width: 15rem;
-    align-self: center;
-    border-radius: 1rem;
-    border: 1px solid rgba(55, 65, 81, 0.6);
-}
-
-
-/* .right-cont {
-    width: 75%; 
-} */
 
 .desc {
     word-wrap: break-word;
@@ -168,10 +157,31 @@ a {
     text-align: left;
     width: 17rem;
     margin: 1rem 0;
+    font-size: 1.2rem;
 }
 
+
+/* Data Card */
+
+.data-card {
+    padding: 1rem;
+    margin: 1rem;
+    color: #525252;
+    background: #E2E8F0;
+    width: 15rem;
+    /* align-self: center; */
+    border-radius: 1rem;
+    border: 1px solid rgba(55, 65, 81, 0.6);
+}
+
+
+/* .right-cont {
+width: 75%; 
+} */
+
 .data-label {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    color: #404040;
     margin: .5rem;
 }
 
@@ -181,4 +191,55 @@ a {
     border-radius: 1rem;
     border: 1px solid rgba(55, 65, 81, 0.6);
     color: #f3f4f6;
+}
+
+hr {
+    margin: .2rem;
+    background: #3F3F46;
+    border: none;
+    height: .1px;
+}
+
+
+/* Stats */
+
+.stat-holder {
+    padding: 1rem;
+    background-color: #ECFCCB;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    min-width: fit-content;
+}
+
+.stat-table {
+    border: none;
+    color: #525252;
+}
+
+.stat-holder h2 {
+    color: #262626
+}
+
+.stat-label {
+    padding: .2rem;
+    text-align: left;
+    /* font-size: 1.2rem; */
+    color: #404040;
+}
+
+td {
+    border-bottom: 1px solid #3F3F46;
+}
+
+.bar-chart {
+    border-bottom: 1px solid #f3f4f6;
+    border-radius: 1rem;
+    /* margin: 1rem 0; */
+    height: .5rem;
+}
+
+.stat-value {
+    padding: .2rem;
 }
