@@ -15,8 +15,8 @@ const EggCard = () => {
               <div>
                   
               {
-                  pokeData.eggGroups.map(egg=>(
-                      <p>
+                  pokeData.eggGroups.map((egg,i)=>(
+                      <p key={i}>
                         {egg.name} 
                     </p>
                 ))
