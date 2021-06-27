@@ -6,7 +6,7 @@ const PokeStats = () => {
     const {pokeData} =useContext(PokeContext)
     return (
         <div className="stat-holder">
-            <h2>Base stats</h2>
+            <h2 className="heading">Base stats</h2>
             <table className="stat-table" >
                 <tbody>
 
@@ -18,7 +18,7 @@ const PokeStats = () => {
                             <td className="stat-label" >{stat}</td>
                             <td>
 
-                            <div className="bar-chart" style={{width:pokeData.stats[`${stat}`], background:pokeData.themeColor }}></div>
+                            <div className="bar-chart" style={{width:pokeData.stats[`${stat}`], background:"#FF7F0F" }}></div>
                             </td>
                             <td className="stat-value" >{pokeData.stats[`${stat}`]}</td>
                             
